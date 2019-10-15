@@ -2,6 +2,9 @@
 
 IP="$(curl --silent --show-error --fail ifconfig.me)"
 FILE="ServerIP.txt"
+FILEPATH="/home/pi/Code/General/"
+
+cd "${FILEPATH}"
 
 if [ "${IP}" = "$(cat ServerIP.txt)" ];
 then
