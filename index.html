@@ -17,7 +17,7 @@
             let toAdd = "http://99.242.204.188/";
             delete sessionStorage.redirect;
             if (redirect && redirect != location.href) {
-                let toURL = fromURL.replace(toDelete, toAdd);
+                let toURL = redirect.replace(toDelete, toAdd);
                 window.location.replace(toURL);
             }
             else {
