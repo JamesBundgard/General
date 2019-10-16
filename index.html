@@ -10,12 +10,21 @@
 
 <body>
     <script>
-        let fromURL = window.location.href;
-        let toDelete = "https://jamesbundgard.github.io/General/";
-        let toAdd = "http://99.242.204.188/";
 
-        let toURL = fromURL.replace(toDelete, toAdd);
-        window.location.replace(toURL);
+        (function(){
+            var redirect = sessionStorage.redirect;
+            let toDelete = "https://jamesbundgard.github.io/General/";
+            let toAdd = "http://99.242.204.188/";
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                let toURL = fromURL.replace(toDelete, toAdd);
+                window.location.replace(toURL);
+            }
+            else {
+                window.location.replace(toAdd);
+            }
+        })();
+        
     </script>
 </body>
 </html>
