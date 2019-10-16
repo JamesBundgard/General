@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirect Page</title>
+    <meta name="description" content="Custom redirect page">
+    <meta name="author" content="James Bundgard">
+</head>
+
+<body>
+    <script>
+        let fromURL = window.location.href;
+        let toDelete = "https://jamesbundgard.github.io/General/";
+        let toAdd = "http://99.242.204.188/";
+
+        let toURL = fromURL.replace(toDelete, toAdd);
+        window.location.replace(toURL);
+    </script>
+</body>
+</html>
